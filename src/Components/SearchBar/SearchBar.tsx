@@ -10,7 +10,7 @@ export function SearchBar() {
       <Input
         value={search}
         onChange={(event) => setSearch(event.target.value)}
-        placeholder="Comece a escrever"
+        placeholder="O que você quer ouvir?"
       />
     </Container>
   );

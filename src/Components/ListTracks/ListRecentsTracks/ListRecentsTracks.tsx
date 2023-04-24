@@ -1,10 +1,11 @@
 import { usePlayingTrackContext } from "contexts/PlayingTrackContext";
 import { IRecentsTracks } from "interfaces/IRecentsTracks";
-import { Container, Subtitle, Wrapper } from "../styles";
-import { AlbumItem } from "../AlbunsItem/AlbumItem";
+import { Container, ContainerLoading, Subtitle, Wrapper } from "../styles";
+import { TrackItem } from "../TrackItem/TrackItem";
 import { getToken } from "hooks/useToken";
 import { useEffect, useState } from "react";
 import { getRecentTracks } from "services/spotify";
+import { CircularProgress } from "@mui/material";
 
 type ListTracksProps = {
   title: string;
@@ -19,13 +20,13 @@ export function ListRecentsTracks(props: ListTracksProps) {
     }
   }, [token?.token]);
   const { setPlayingTrack } = usePlayingTrackContext();
-  return (
+  return recentsTracks ? (
     <Container>
       <Subtitle> {props.title} </Subtitle>
       <Wrapper>
         {recentsTracks?.map((item) => {
           return (
-            <AlbumItem
+            <TrackItem
               handlePlay={() => setPlayingTrack(item)}
               title={item.name}
               description={item.artists[0].name}
@@ -36,5 +37,9 @@ export function ListRecentsTracks(props: ListTracksProps) {
         })}
       </Wrapper>
     </Container>
+  ) : (
+    <ContainerLoading>
+      <CircularProgress color="success" />
+    </ContainerLoading>
   );
 }

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { AlbumItem } from "../AlbunsItem/AlbumItem";
-import { Container, Subtitle, Wrapper } from "../styles";
+import { TrackItem } from "../TrackItem/TrackItem";
+import { Container, ContainerLoading, Subtitle, Wrapper } from "../styles";
 import { ITracks } from "interfaces/ITrackList";
 
 import { usePlayingTrackContext } from "contexts/PlayingTrackContext";
 import { useSearchContext } from "contexts/SearchContext";
 import { getSearchMusics } from "services/spotify";
 import { getToken } from "hooks/useToken";
+import { CircularProgress } from "@mui/material";
 
 type AlbumListProps = {
   title: string;
@@ -24,13 +25,13 @@ export function AlbumList(props: AlbumListProps) {
     }
   }, [token?.token, search]);
 
-  return (
+  return searchMusicData ? (
     <Container>
       <Subtitle> {props.title} </Subtitle>
       <Wrapper>
         {searchMusicData?.items.map((track) => {
           return (
-            <AlbumItem
+            <TrackItem
               handlePlay={() => setPlayingTrack(track)}
               title={track.name}
               description={track.artists[0].name}
@@ -41,5 +42,9 @@ export function AlbumList(props: AlbumListProps) {
         })}
       </Wrapper>
     </Container>
+  ) : (
+    <ContainerLoading>
+      <CircularProgress color="success" />
+    </ContainerLoading>
   );
 }

@@ -8,10 +8,10 @@ type Props = {
   image: string;
   handlePlay: () => void;
 };
-export function AlbumItem({ title, description, image, handlePlay }: Props) {
+export function TrackItem({ title, description, image, handlePlay }: Props) {
   return (
     <Container>
-      <Image src={image} />
+      <Image src={image} alt="Imagem" />
       <Button size="large" className="button" onClick={() => handlePlay()}>
         <PlayArrowIcon fontSize="large" />
       </Button>

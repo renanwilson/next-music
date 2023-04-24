@@ -17,3 +17,9 @@ export const Subtitle = styled.h2`
   color: var(--terceary);
   margin-bottom: 35px;
 `;
+export const ContainerLoading = styled.div`
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
