@@ -3,7 +3,7 @@ import React from "react";
 import { Button, Link, Logo } from "./styles";
 
 export function LoginButtton() {
-  const REDIRECT_URI = "http://localhost:3000/list-track";
+  const REDIRECT_URI = "https://next-music-steel.vercel.app/list-track";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
   const SCOPE =
