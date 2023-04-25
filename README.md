@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/62245391/234327461-c0408a3e-8ac0-4de9-9e3d-29f3b2fcb92b.png" />
 
 ## 🖥️ Look this project in web
-- [next-music]()
+- [next-music](https://next-music-git-master-renanwilson.vercel.app/)
 
 ## 🚀 Technologies
 
@@ -23,5 +23,8 @@ This Project is developed by me, with intention of improving my Next.JS skills. 
 
 To run this project you need:
 
-- `yarn install` para instalar as dependência projeto
-- `yarn dev` para abrir o projeto na porta 3000
+- `yarn install` to install the dependencies
+
+- change [this constant](https://github.com/renanwilson/next-music/blob/a8239741aded2803869e8aa81bb5a3632644b99f/src/Components/LoginButton/LoginButton.tsx#L6) to "http://localhost:3000/list-track"
+
+- `yarn dev` to run the project
