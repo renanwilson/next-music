@@ -15,12 +15,14 @@ export const Button = styled(IconButton)`
   border: none;
   color: #000000 !important;
   position: absolute !important;
-  z-index: 1 !important;
   margin-left: 128px !important;
   margin-top: 140px !important;
   padding: 16px;
   border-radius: 50%;
   ${Container}:hover & {
+    display: inline-flex !important;
+  }
+  @media (max-width: 1000px) {
     display: inline-flex !important;
   }
 `;
@@ -36,6 +38,13 @@ export const Title = styled.h3`
   font-size: var(--fontMedium);
   color: var(--terceary);
   margin: 10px;
+  @media (max-width: 1000px) {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    display: block;
+  }
 `;
 export const Description = styled.h4`
   display: flex;

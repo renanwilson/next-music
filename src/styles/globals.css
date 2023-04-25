@@ -23,6 +23,7 @@ body {
   width: 100vw;
   height: 100%;
   font-size: 16px;
+  background-color: var(--bg);
 }
 * {
   box-sizing: border-box;

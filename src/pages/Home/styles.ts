@@ -5,7 +5,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg);
 `;
 export const Button = styled.button`
   background-color: #1ed760;

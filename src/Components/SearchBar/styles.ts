@@ -5,11 +5,17 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 0 var(--paddingMain);
   margin-bottom: 40px;
+  @media (max-width: 1000px) {
+    padding: 0 18px;
+  }
 `;
 export const Label = styled.label`
   color: var(--terceary);
   font-size: var(--fontMedium);
   margin-bottom: 10px;
+  @media (max-width: 1000px) {
+    font-size: var(--fontLarge);
+  }
 `;
 export const Input = styled.input`
   color: var(--secundary);
@@ -21,6 +27,11 @@ export const Input = styled.input`
   border: 0;
   border-bottom: 2px solid var(--secundary);
   background-color: transparent;
-  color: var(--white);
   outline: 0;
+  @media (max-width: 1000px) {
+    box-sizing: unset;
+    font-size: 32px;
+    line-height: 32px;
+    height: 32px;
+  }
 `;

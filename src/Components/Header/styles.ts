@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  background-color: var(--bg);
   padding: 0 140px 40px 140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1000px) {
+    padding: 40px 0 40px 0;
+    justify-content: space-around;
+  }
 `;
 export const Image = styled.img`
   width: 200px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 export const Avatar = styled.img`
   width: 3rem;
