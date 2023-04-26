@@ -21,6 +21,8 @@ This Project is developed by me, with intention of improving my Next.JS skills. 
 
 ## 📜 Scripts
 
+Ps: while I can't get authorization to have users be able to log in, call me so we can test it together. Or look [this video](https://youtu.be/uiqK2FV5dJc), I show the project.
+
 To run this project you need:
 
 - `yarn install` to install the dependencies
