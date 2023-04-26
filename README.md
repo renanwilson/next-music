@@ -2,6 +2,7 @@
 <img src="https://user-images.githubusercontent.com/62245391/234327461-c0408a3e-8ac0-4de9-9e3d-29f3b2fcb92b.png" />
 
 ## 🖥️ Look this project in web
+Ps: while I can't get authorization to have users be able to log in, call me so we can test it together. Or look [this video](https://youtu.be/uiqK2FV5dJc), I show the project.
 - [next-music](https://next-music-git-master-renanwilson.vercel.app/)
 
 ## 🚀 Technologies
