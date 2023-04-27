@@ -10,6 +10,7 @@ export function Player({ trackUri, accessToken }: Props) {
   useEffect(() => {
     setPlay(true);
   }, [trackUri]);
+  
   return (
     <div>
       <SpotifyPlayer
