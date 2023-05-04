@@ -1,4 +1,6 @@
 import axios from "axios";
+import { IRecentsTracks } from "interfaces/IRecentsTracks";
+import { ITracks } from "interfaces/ITrackList";
 import { UserProfile } from "interfaces/IUserProfile";
 import { Dispatch, SetStateAction } from "react";
 
@@ -19,7 +21,7 @@ export const getUserDetails = async (
 };
 export const getSearchMusics = async (
   token: string | null | undefined,
-  setData: any,
+  setData: Dispatch<SetStateAction<ITracks | undefined>>,
   search: string
 ) => {
   await spotifyService
@@ -37,7 +39,7 @@ export const getSearchMusics = async (
 };
 export const getRecentTracks = async (
   token: string | null | undefined,
-  setData: any
+  setData: Dispatch<SetStateAction<IRecentsTracks[]>>
 ) => {
   await spotifyService
     .get("/me/top/tracks", {

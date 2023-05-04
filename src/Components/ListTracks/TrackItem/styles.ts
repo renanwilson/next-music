@@ -7,9 +7,6 @@ export const Container = styled.div`
   margin-bottom: 20px;
   background-color: var(--primary);
   border-radius: 8px;
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 export const Button = styled(IconButton)`
